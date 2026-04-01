@@ -1,0 +1,353 @@
+
+\partabstract{这是大学物理学（第二版）的习题解答。}
+
+\part{大学物理学（第二版）习题解答}
+
+\chapter{第一章}
+
+\section{习题 1}
+
+\begin{exercise}\label{ex:1.1}
+为了方便起见，第十四届国际计量大会推荐了如表 1.6 所示的国际单位的词头(SI prefixes)．我们熟悉的 km(kilometer)、cm(centimeter)都是加词头的单位．
+
+(a) 皮秒光学、飞秒光学各涉及什么时间量级?
+
+(b) 纳米(nanometer)材料涉及什么量级的尺度?
+
+(c) eV(电子伏)是能量单位, MeV 和 GeV 分别是多少 eV?
+\end{exercise}
+\begin{table}[htbp]
+\centering
+\caption{SI 词头}
+\begin{tabular}{llc|llc}
+\hline
+因数 & 词头名称 & 符号 & 因数 & 词头名称 & 符号 \\
+\hline
+$10^1$ & 十 & deca (da) & $10^{-1}$ & 分 & deci (d) \\
+$10^2$ & 百 & hecto (h) & $10^{-2}$ & 厘 & centi (c) \\
+$10^3$ & 千 & kilo (k) & $10^{-3}$ & 毫 & milli (m) \\
+$10^6$ & 兆 & mega (M) & $10^{-6}$ & 微 & micro ($\mu$) \\
+$10^9$ & 吉 & giga (G) & $10^{-9}$ & 纳 & nano (n) \\
+$10^{12}$ & 太 & tera (T) & $10^{-12}$ & 皮 & pico (p) \\
+$10^{15}$ & 拍 & peta (P) & $10^{-15}$ & 飞 & femto (f) \\
+$10^{18}$ & 艾 & exa (E) & $10^{-18}$ & 阿 & atto (a) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{solution}
+(a) 根据表格可知，“皮”对应的因数为 $10^{-12}$，“飞”对应的因数为 $10^{-15}$。因此，皮秒光学涉及的时间量级为 $10^{-12}\text{ s}$，飞秒光学涉及的时间量级为 $10^{-15}\text{ s}$。
+
+(b) “纳”对应的因数为 $10^{-9}$，因此纳米材料涉及的尺度量级为 $10^{-9}\text{ m}$。
+
+(c) “兆(M)”对应的因数为 $10^6$，“吉(G)”对应的因数为 $10^9$。因此，$\text{MeV} = 10^6\text{ eV}$，$\text{GeV} = 10^9\text{ eV}$。
+\end{solution}
+
+\begin{exercise}\label{ex:1.2}
+哈勃半径给出了可观察宇宙半径的量级，它相当于多少 l.y.(光年)?
+\end{exercise}
+\begin{solution}
+哈勃半径 $R_H$ 的量级约为 $10^{26}\text{ m}$。
+
+已知 1 光年 (l.y.) 是光在真空中一年走过的距离，即：
+$$ 1\text{ l.y.} = c \times 1\text{ a} \approx 3.0 \times 10^8\text{ m/s} \times 3.156 \times 10^7\text{ s} \approx 9.46 \times 10^{15}\text{ m} $$
+
+因此，哈勃半径相当于：
+$$ R_H \approx \frac{10^{26}\text{ m}}{9.46 \times 10^{15}\text{ m/l.y.}} \approx 1.06 \times 10^{10}\text{ l.y.} $$
+即大约相当于 100 亿光年。
+\end{solution}
+
+\begin{exercise}\label{ex:1.3}
+地球的质量是 $5.98 \times 10^{24}\text{ kg}$．利用阿伏伽德罗常量，我们可以说它近似为 $10\text{ mol}$ 个千克．按这一说法，地球的质量是多少? 其精度如何?
+\end{exercise}
+\begin{solution}
+阿伏伽德罗常量 $N_A \approx 6.022 \times 10^{23}\text{ mol}^{-1}$。
+
+按题意，“$10\text{ mol}$ 个千克”对应的质量近似值为：
+$$ M' = 10\text{ mol} \times N_A \times 1\text{ kg} \approx 10 \times 6.022 \times 10^{23}\text{ kg} = 6.022 \times 10^{24}\text{ kg} $$
+
+其百分误差（精度）为：
+$$ \eta = \frac{|M' - M|}{M} \times 100\% = \frac{|6.022 - 5.98|}{5.98} \times 100\% \approx 0.7\% $$
+即这种近似说法的误差不到 $1\%$，精度较高。
+\end{solution}
+
+\begin{exercise}\label{ex:1.4}
+$1\text{ a}$(一年)近似等于 $\pi \times 10^7\text{ s}$，这一近似的百分误差是多少?
+\end{exercise}
+\begin{solution}
+一年（按回归年计算）的精确时间大约为：
+$$ 1\text{ a} = 365.2422\text{ 天} \times 24\text{ h/天} \times 3600\text{ s/h} \approx 31556926\text{ s} $$
+
+近似值 $T' = \pi \times 10^7\text{ s} \approx 3.1415926 \times 10^7\text{ s} = 31415926\text{ s}$。
+
+百分误差为：
+$$ \eta = \frac{|T' - T|}{T} \times 100\% = \frac{31556926 - 31415926}{31556926} \times 100\% \approx 0.45\% $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.5}
+质子的半径约 $10^{-15}\text{ m}$，哈勃半径约为 $10^{26}\text{ m}$，在对数标度上，居间的距离是多少? 试举出这样大小的一个有物理意义的量．
+\end{exercise}
+\begin{solution}
+在对数标度上求居间值，即求这两个量级指数的算术平均值。
+$$ \log_{10} R_{\text{mid}} = \frac{-15 + 26}{2} = 5.5 $$
+因此，居间的距离 $R_{\text{mid}} = 10^{5.5}\text{ m} \approx 3.16 \times 10^5\text{ m} = 316\text{ km}$。
+
+具有这样大小物理意义的量可以是：某些近地人造卫星的轨道高度，或者是地球上两个相邻城市之间的距离。
+\end{solution}
+
+\begin{exercise}\label{ex:1.6}
+无量纲量可以有单位，试举两个这方面的例子．
+\end{exercise}
+\begin{solution}
+1. 平面角：其定义为弧长与半径之比 ($l/r$)，量纲为 $1$，但其单位为弧度 (rad)。
+2. 立体角：其定义为球面面积与半径平方之比 ($S/r^2$)，量纲为 $1$，但其单位为球面度 (sr)。
+\end{solution}
+
+\begin{exercise}\label{ex:1.7}
+用三个普适常量分别构造具有：(a) 时间量纲的量；(b) 质量量纲的量．
+\end{exercise}
+\begin{solution}
+我们选取真空中的光速 $c$、万有引力常量 $G$ 和约化普朗克常量 $\hbar$ 作为三个普适常量。它们的量纲分别为：$[c] = \text{L}\text{T}^{-1}$，$[G] = \text{M}^{-1}\text{L}^3\text{T}^{-2}$，$[\hbar] = \text{M}\text{L}^2\text{T}^{-1}$。
+
+(a) 构造具有时间量纲的量（普朗克时间）：
+$$ t_p = \sqrt{\frac{\hbar G}{c^5}} $$
+
+(b) 构造具有质量量纲的量（普朗克质量）：
+$$ m_p = \sqrt{\frac{\hbar c}{G}} $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.8}
+利用一球状质量分布的参数 $(m, R)$ 和常数 $G$ 构造一个具有速度量纲的量．
+\end{exercise}
+\begin{solution}
+已知常量的量纲：$[m] = \text{M}$，$[R] = \text{L}$，$[G] = \text{M}^{-1}\text{L}^3\text{T}^{-2}$。速度的量纲为 $[v] = \text{L}\text{T}^{-1}$。
+
+设 $v \propto G^\alpha m^\beta R^\gamma$，则其量纲等式为：
+$$ \text{L}\text{T}^{-1} = (\text{M}^{-1}\text{L}^3\text{T}^{-2})^\alpha \text{M}^\beta \text{L}^\gamma = \text{M}^{-\alpha+\beta}\text{L}^{3\alpha+\gamma}\text{T}^{-2\alpha} $$
+比较等式两边各基本量纲的指数，可得：
+$$ \begin{cases} -\alpha + \beta = 0 \\ 3\alpha + \gamma = 1 \\ -2\alpha = -1 \end{cases} $$
+解得 $\alpha = 1/2$，$\beta = 1/2$，$\gamma = -1/2$。
+
+因此，构造出的具有速度量纲的量为 $\sqrt{\frac{Gm}{R}}$。（物理上这对应于环绕速度或逃逸速度的量级）。
+\end{solution}
+
+\begin{exercise}\label{ex:1.9}
+$m_e c^2$ 是和电子相联系的特征能量，你能否据此定义一个电子“半径”?
+\end{exercise}
+\begin{solution}
+可以。我们可以将电子的特征静止能量 $m_e c^2$ 与电子的静电势能相联系。
+
+假设电子是一个半径为 $r$ 的带电球体，其静电势能的量级为 $\frac{e^2}{4\pi\varepsilon_0 r}$（其中 $e$ 为基本电荷）。令这两者相等：
+$$ m_e c^2 = \frac{e^2}{4\pi\varepsilon_0 r} $$
+由此可定义出电子的经典半径 $r_e$：
+$$ r_e = \frac{e^2}{4\pi\varepsilon_0 m_e c^2} $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.10}
+一质量为 $m$ 的物体悬挂在劲度系数为 $k$ 的弹簧下面，物体受力正比于其位移，比例系数即为 $k$．利用量纲分析，求出物体-弹簧系统的振动周期 $T$ 对 $k$、$m$ 等量的依赖关系(忽略摩擦)．
+\end{exercise}
+\begin{solution}
+各物理量的量纲为：$[T] = \text{T}$，$[m] = \text{M}$。
+由胡克定律 $F = kx$ 可知，劲度系数 $k$ 的量纲为：$[k] = \frac{[F]}{[x]} = \frac{\text{M}\text{L}\text{T}^{-2}}{\text{L}} = \text{M}\text{T}^{-2}$。
+
+假设振动周期 $T = C m^\alpha k^\beta$（其中 $C$ 为无量纲常数），则量纲关系为：
+$$ \text{T} = \text{M}^\alpha (\text{M}\text{T}^{-2})^\beta = \text{M}^{\alpha+\beta} \text{T}^{-2\beta} $$
+比较两边指数得：
+$$ \begin{cases} \alpha + \beta = 0 \\ -2\beta = 1 \end{cases} $$
+解得 $\beta = -1/2$，$\alpha = 1/2$。
+
+因此，振动周期 $T$ 对 $k$、$m$ 的依赖关系为：
+$$ T \propto \sqrt{\frac{m}{k}} $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.11}
+一个容积为 $V$ 的盒子内盛有 $N$ 个质量为 $m$ 的粒子，粒子无规地在各个方向上以速率 $v$ 运动．利用量纲分析法，求出这种气体的压强对 $N$、$V$、$m$ 和 $v$ 的依赖关系．
+\end{exercise}
+\begin{solution}
+各物理量的量纲如下：压强 $[p] = \text{M}\text{L}^{-1}\text{T}^{-2}$，容积 $[V] = \text{L}^3$，质量 $[m] = \text{M}$，速率 $[v] = \text{L}\text{T}^{-1}$。粒子数 $N$ 是无量纲量。
+
+假设单粒子对压强的贡献式为 $p' = C V^\alpha m^\beta v^\gamma$，则：
+$$ \text{M}\text{L}^{-1}\text{T}^{-2} = (\text{L}^3)^\alpha \text{M}^\beta (\text{L}\text{T}^{-1})^\gamma = \text{M}^\beta \text{L}^{3\alpha+\gamma} \text{T}^{-\gamma} $$
+比较指数可得：
+$$ \begin{cases} \beta = 1 \\ 3\alpha + \gamma = -1 \\ -\gamma = -2 \end{cases} $$
+解得 $\beta = 1$，$\gamma = 2$，$\alpha = -1$。因此 $p' \propto \frac{mv^2}{V}$。
+
+考虑到系统内共有 $N$ 个粒子，总压强应与粒子数成正比，因此压强 $p$ 的依赖关系为：
+$$ p \propto \frac{N m v^2}{V} $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.12}
+低温下固体的热容与温度有关: $C_V = \alpha T^3 + \gamma T$, 其中 $\alpha$、$\gamma$ 为常量．在极低温下，它和温度的什么函数有相同的数量级?
+\end{exercise}
+\begin{solution}
+在极低温（即 $T \to 0$）的条件下，高阶项 $T^3$ 的下降速度远快于线性项 $T$。
+
+因此，当 $T$ 极小时，$\alpha T^3 \ll \gamma T$，热容公式中的线性项 $\gamma T$ 将占据主导地位。故在极低温下，$C_V$ 和温度的一次函数 $T$ 有相同的数量级。
+\end{solution}
+
+\begin{exercise}\label{ex:1.13}
+展开 $(a^2 - 2ar\cos\theta + r^2)^{-1/2}$ 到二级小量 $(r/a)^2$ $(r \ll a)$．
+\end{exercise}
+\begin{solution}
+首先将原式提出公因子 $a$：
+$$ (a^2 - 2ar\cos\theta + r^2)^{-1/2} = \frac{1}{a} \left[ 1 - 2\left(\frac{r}{a}\right)\cos\theta + \left(\frac{r}{a}\right)^2 \right]^{-1/2} $$
+
+令 $x = -2\left(\frac{r}{a}\right)\cos\theta + \left(\frac{r}{a}\right)^2$，由于 $r \ll a$，此 $x$ 为小量。利用泰勒展开公式 $(1+x)^{-1/2} \approx 1 - \frac{1}{2}x + \frac{3}{8}x^2$ 进行展开：
+$$ \begin{aligned}
+(1+x)^{-1/2} &\approx 1 - \frac{1}{2}\left[ -2\left(\frac{r}{a}\right)\cos\theta + \left(\frac{r}{a}\right)^2 \right] + \frac{3}{8}\left[ -2\left(\frac{r}{a}\right)\cos\theta + \left(\frac{r}{a}\right)^2 \right]^2 \\
+&\approx 1 + \left(\frac{r}{a}\right)\cos\theta - \frac{1}{2}\left(\frac{r}{a}\right)^2 + \frac{3}{8}\left[ 4\left(\frac{r}{a}\right)^2\cos^2\theta \right] \quad \text{(舍去高于二次的项)} \\
+&= 1 + \left(\frac{r}{a}\right)\cos\theta + \left(\frac{r}{a}\right)^2 \left( \frac{3\cos^2\theta - 1}{2} \right)
+\end{aligned} $$
+
+所以，展开式为：
+$$ \frac{1}{a} \left[ 1 + \left(\frac{r}{a}\right)\cos\theta + \frac{3\cos^2\theta - 1}{2} \left(\frac{r}{a}\right)^2 \right] $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.14}
+$\boldsymbol{A}$、$\boldsymbol{B}$、$\boldsymbol{C}$ 都是极矢量，三重积 $\boldsymbol{A} \times (\boldsymbol{B} \times \boldsymbol{C})$ 是极矢量还是轴矢量?
+\end{exercise}
+\begin{solution}
+根据矢量的性质，极矢量与极矢量的叉乘结果是轴矢量（伪矢量），而极矢量与轴矢量的叉乘结果是极矢量。
+
+题中 $\boldsymbol{B}$ 和 $\boldsymbol{C}$ 均为极矢量，故它们的叉积 $(\boldsymbol{B} \times \boldsymbol{C})$ 是轴矢量。
+$\boldsymbol{A}$ 是极矢量，故极矢量 $\boldsymbol{A}$ 与轴矢量 $(\boldsymbol{B} \times \boldsymbol{C})$ 的叉积必然是极矢量。
+\end{solution}
+
+\begin{exercise}\label{ex:1.15}
+作图说明: 混合积 $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C})$ 表示平行六面体的体积．
+\end{exercise}
+\begin{proof}
+设由不共面的三个矢量 $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ 构成一个平行六面体。
+
+1. 考虑底面由矢量 $\boldsymbol{B}$ 和 $\boldsymbol{C}$ 构成，由叉乘的几何意义可知，$\boldsymbol{B} \times \boldsymbol{C}$ 的模长 $|\boldsymbol{B} \times \boldsymbol{C}|$ 在数值上等于该底面平行四边形的面积 $S$。且矢量 $\boldsymbol{B} \times \boldsymbol{C}$ 的方向垂直于底面，即为该平行六面体的高的方向（法线方向 $\boldsymbol{n}$）。
+2. 平行六面体的高 $h$ 等于矢量 $\boldsymbol{A}$ 在法线 $\boldsymbol{n}$ 方向上的投影，即 $h = |\boldsymbol{A}| \cos\theta$，其中 $\theta$ 是 $\boldsymbol{A}$ 与 $\boldsymbol{B} \times \boldsymbol{C}$ 之间的夹角。
+3. 根据点乘的定义，混合积可写为：
+$$ \boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C}) = |\boldsymbol{A}| |\boldsymbol{B} \times \boldsymbol{C}| \cos\theta = (|\boldsymbol{B} \times \boldsymbol{C}|) \cdot (|\boldsymbol{A}| \cos\theta) = S \cdot h $$
+这正是底面积乘以高，即平行六面体的体积。
+\end{proof}
+
+\begin{exercise}\label{ex:1.16}
+当矢量 $\boldsymbol{A}$、$\boldsymbol{B}$、$\boldsymbol{C}$ 作镜像变换时，混合积 $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C})$ 如何变换? 设该混合积为非零的量．
+\end{exercise}
+\begin{solution}
+设 $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ 为极矢量，在坐标系的镜像变换（即空间反演）下，极矢量会反向，即 $\boldsymbol{A} \to -\boldsymbol{A}$，$\boldsymbol{B} \to -\boldsymbol{B}$，$\boldsymbol{C} \to -\boldsymbol{C}$。
+
+对混合积进行代入变换：
+$$ (-\boldsymbol{A}) \cdot ((-\boldsymbol{B}) \times (-\boldsymbol{C})) = (-\boldsymbol{A}) \cdot (\boldsymbol{B} \times \boldsymbol{C}) = - \left[ \boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C}) \right] $$
+由此可见，混合积在镜像变换下改变符号。这表明该混合积是一个伪标量（赝标量）。
+\end{solution}
+
+\begin{exercise}\label{ex:1.17}
+已知矢量
+$$ \boldsymbol{b}_1 = 2\pi \frac{\boldsymbol{a}_2 \times \boldsymbol{a}_3}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)}, \quad \boldsymbol{b}_2 = 2\pi \frac{\boldsymbol{a}_3 \times \boldsymbol{a}_1}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)}, \quad \boldsymbol{b}_3 = 2\pi \frac{\boldsymbol{a}_1 \times \boldsymbol{a}_2}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)} $$
+试归纳出标量积 $\boldsymbol{b}_i \cdot \boldsymbol{a}_j$ 值满足的规律．
+\end{exercise}
+\begin{solution}
+分别计算 $\boldsymbol{b}_i \cdot \boldsymbol{a}_j$ 的值：
+
+当 $i = j$ 时，例如 $i=1, j=1$：
+$$ \boldsymbol{b}_1 \cdot \boldsymbol{a}_1 = 2\pi \frac{(\boldsymbol{a}_2 \times \boldsymbol{a}_3) \cdot \boldsymbol{a}_1}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)} = 2\pi \frac{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)} = 2\pi $$
+同理可证 $\boldsymbol{b}_2 \cdot \boldsymbol{a}_2 = 2\pi$，$\boldsymbol{b}_3 \cdot \boldsymbol{a}_3 = 2\pi$。
+
+当 $i \neq j$ 时，例如 $i=1, j=2$：
+$$ \boldsymbol{b}_1 \cdot \boldsymbol{a}_2 = 2\pi \frac{(\boldsymbol{a}_2 \times \boldsymbol{a}_3) \cdot \boldsymbol{a}_2}{\boldsymbol{a}_1 \cdot (\boldsymbol{a}_2 \times \boldsymbol{a}_3)} $$
+因为 $(\boldsymbol{a}_2 \times \boldsymbol{a}_3)$ 生成的矢量垂直于 $\boldsymbol{a}_2$ 和 $\boldsymbol{a}_3$，所以 $(\boldsymbol{a}_2 \times \boldsymbol{a}_3) \cdot \boldsymbol{a}_2 = 0$，结果为 $0$。同理，所有 $i \neq j$ 的项点积皆为 $0$。
+
+归纳规律可表示为克罗内克 $\delta$ 函数形式：
+$$ \boldsymbol{b}_i \cdot \boldsymbol{a}_j = 2\pi \delta_{ij} \quad \text{其中} \quad \delta_{ij} = \begin{cases} 1, & i = j \\ 0, & i \neq j \end{cases} $$
+\end{solution}
+
+\begin{exercise}\label{ex:1.18}
+求例 1.3 中的 $\boldsymbol{A}$、$\boldsymbol{d}$．
+\end{exercise}
+\begin{solution}
+由于题干未提供教材“例 1.3”的具体数值与上下文，此处省略具体数值计算。一般情况下，求矢量的模长和方向可以通过相应的矢量代数公式代入数据进行求解，如需精确解答请补充“例 1.3”的内容。
+\end{solution}
+
+\begin{exercise}\label{ex:1.19}
+电荷在已知磁场 $\boldsymbol{B}$ 中的运动遵循
+$$ m\boldsymbol{a} = q\boldsymbol{v} \times \boldsymbol{B} $$
+如果加速度 $\boldsymbol{a}$ 可以表示为 $\boldsymbol{\omega} \times \boldsymbol{v}$，其中矢量 $\boldsymbol{\omega}$ 怎样用已知矢量 $\boldsymbol{B}$ 来表达?
+\end{exercise}
+\begin{solution}
+已知 $m\boldsymbol{a} = q\boldsymbol{v} \times \boldsymbol{B}$，将 $\boldsymbol{a} = \boldsymbol{\omega} \times \boldsymbol{v}$ 代入方程：
+$$ m(\boldsymbol{\omega} \times \boldsymbol{v}) = q\boldsymbol{v} \times \boldsymbol{B} $$
+利用叉乘反交换律 $\boldsymbol{v} \times \boldsymbol{B} = -\boldsymbol{B} \times \boldsymbol{v}$，等式右侧可改写为：
+$$ m(\boldsymbol{\omega} \times \boldsymbol{v}) = -q(\boldsymbol{B} \times \boldsymbol{v}) $$
+由于此等式对任意速度 $\boldsymbol{v}$ 均成立，故可去掉两边的叉乘项（对比系数），得到：
+$$ m\boldsymbol{\omega} = -q\boldsymbol{B} $$
+解得矢量 $\boldsymbol{\omega}$：
+$$ \boldsymbol{\omega} = -\frac{q}{m}\boldsymbol{B} $$
+这正是回旋加速频率（矢量形式）的表达式。
+\end{solution}
+
+\begin{exercise}\label{ex:1.20}
+证明：2 个线性相关的矢量一定共线，3 个线性相关的矢量一定共面．
+\end{exercise}
+\begin{proof}
+(1) 设 2 个矢量 $\boldsymbol{A}$ 和 $\boldsymbol{B}$ 线性相关，则存在不全为零的常数 $c_1, c_2$，使得：
+$$ c_1 \boldsymbol{A} + c_2 \boldsymbol{B} = \boldsymbol{0} $$
+不妨设 $c_1 \neq 0$，则有 $\boldsymbol{A} = -\frac{c_2}{c_1} \boldsymbol{B}$。这说明矢量 $\boldsymbol{A}$ 是矢量 $\boldsymbol{B}$ 的标量倍，故它们方向相同或相反，即一定共线。
+
+(2) 设 3 个矢量 $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ 线性相关，则存在不全为零的常数 $c_1, c_2, c_3$，使得：
+$$ c_1 \boldsymbol{A} + c_2 \boldsymbol{B} + c_3 \boldsymbol{C} = \boldsymbol{0} $$
+不妨设 $c_3 \neq 0$，则有 $\boldsymbol{C} = -\frac{c_1}{c_3} \boldsymbol{A} - \frac{c_2}{c_3} \boldsymbol{B}$。这说明矢量 $\boldsymbol{C}$ 可以由矢量 $\boldsymbol{A}$ 和 $\boldsymbol{B}$ 线性表出。根据矢量的加法规则，能够由另外两个不共线矢量表出的矢量，必然位于那两个矢量所决定的平面内。因此，它们一定共面。
+\end{proof}
+
+\begin{exercise}\label{ex:1.21}
+一人从悉尼去波士顿旅行，两个城市的纬度和经度分别为(34S, 151E)和(42N, 71W)．出发和到达时的位置矢量是什么(用球坐标表示)? 位移矢量又是什么? 取地球平均半径为 $6.370 \times 10^3\text{ km}$，问两城市间的直线距离是多少?
+\end{exercise}
+\begin{solution}
+建立球坐标系 $(r, \theta, \phi)$：极轴指向北极（$\theta=0^\circ$），赤道平面为 $\theta=90^\circ$；本初子午线对应 $\phi=0^\circ$，向东为正，向西为负。
+
+(1) 位置矢量：
+悉尼 (34S, 151E)：极角 $\theta_1 = 90^\circ + 34^\circ = 124^\circ$，方位角 $\phi_1 = 151^\circ$。
+出发位置矢量：$\boldsymbol{r}_1 = (R, 124^\circ, 151^\circ)$。
+波士顿 (42N, 71W)：极角 $\theta_2 = 90^\circ - 42^\circ = 48^\circ$，方位角 $\phi_2 = -71^\circ = 289^\circ$。
+到达位置矢量：$\boldsymbol{r}_2 = (R, 48^\circ, -71^\circ)$。
+
+(2) 位移矢量：
+位移矢量为 $\Delta\boldsymbol{r} = \boldsymbol{r}_2 - \boldsymbol{r}_1$。
+
+(3) 直线距离：
+直线距离 $d = |\Delta\boldsymbol{r}| = |\boldsymbol{r}_2 - \boldsymbol{r}_1| = \sqrt{R^2 + R^2 - 2R^2\cos\gamma} = R\sqrt{2 - 2\cos\gamma}$，
+其中 $\gamma$ 为两位置矢量夹角，利用球面三角公式或直角坐标点乘计算：
+$$ \begin{aligned}
+\cos\gamma &= \frac{\boldsymbol{r}_1 \cdot \boldsymbol{r}_2}{R^2} = \sin\theta_1\sin\theta_2\cos(\phi_1-\phi_2) + \cos\theta_1\cos\theta_2 \\
+&= \sin(124^\circ)\sin(48^\circ)\cos(151^\circ - (-71^\circ)) + \cos(124^\circ)\cos(48^\circ) \\
+&= (0.8290)(0.7431)\cos(222^\circ) + (-0.5592)(0.6691) \\
+&\approx 0.6160 \times (-0.7431) - 0.3742 \\
+&\approx -0.4578 - 0.3742 = -0.8320
+\end{aligned} $$
+代入距离公式：
+$$ d = R\sqrt{2 - 2(-0.8320)} = R\sqrt{3.664} \approx 1.914R $$
+由于 $R = 6.370 \times 10^3\text{ km}$，
+$$ d \approx 1.914 \times 6370\text{ km} \approx 12192\text{ km} $$
+即两城市间的直线距离约为 $1.22 \times 10^4\text{ km}$。
+\end{solution}
+
+\begin{exercise}\label{ex:1.22}
+在直角坐标系中有矢量
+$$ \boldsymbol{A} = (2, 1, 1), \quad \boldsymbol{B} = (5, 2, 0), \quad \boldsymbol{C} = (1, 1, 1) $$
+求：(a) $\boldsymbol{A} \cdot \boldsymbol{B}$, (b) $\boldsymbol{A} \times \boldsymbol{B}$, (c) $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C})$,
+(d) $\boldsymbol{A} \times (\boldsymbol{B} \times \boldsymbol{C})$, (e) $\boldsymbol{A} \cdot (\boldsymbol{A} + \boldsymbol{B} \times \boldsymbol{C})$, (f) $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C} - \boldsymbol{A} \times \boldsymbol{B})$
+\end{exercise}
+\begin{solution}
+(a) $\boldsymbol{A} \cdot \boldsymbol{B} = 2 \times 5 + 1 \times 2 + 1 \times 0 = 10 + 2 + 0 = 12$。
+
+(b) $\boldsymbol{A} \times \boldsymbol{B} = \begin{vmatrix} \boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\ 2 & 1 & 1 \\ 5 & 2 & 0 \end{vmatrix} = (1 \times 0 - 1 \times 2)\boldsymbol{i} - (2 \times 0 - 1 \times 5)\boldsymbol{j} + (2 \times 2 - 1 \times 5)\boldsymbol{k} = (-2, 5, -1)$。
+
+(c) 先计算 $\boldsymbol{B} \times \boldsymbol{C} = \begin{vmatrix} \boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\ 5 & 2 & 0 \\ 1 & 1 & 1 \end{vmatrix} = (2-0)\boldsymbol{i} - (5-0)\boldsymbol{j} + (5-2)\boldsymbol{k} = (2, -5, 3)$。
+则 $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C}) = 2 \times 2 + 1 \times (-5) + 1 \times 3 = 4 - 5 + 3 = 2$。
+
+(d) $\boldsymbol{A} \times (\boldsymbol{B} \times \boldsymbol{C}) = \begin{vmatrix} \boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\ 2 & 1 & 1 \\ 2 & -5 & 3 \end{vmatrix} = (3 - (-5))\boldsymbol{i} - (6 - 2)\boldsymbol{j} + (-10 - 2)\boldsymbol{k} = (8, -4, -12)$。
+
+(e) $\boldsymbol{A} \cdot (\boldsymbol{A} + \boldsymbol{B} \times \boldsymbol{C}) = \boldsymbol{A} \cdot \boldsymbol{A} + \boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C})$。
+已知 $\boldsymbol{A} \cdot \boldsymbol{A} = 2^2 + 1^2 + 1^2 = 6$，且由 (c) 知 $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C}) = 2$，
+因此 $\boldsymbol{A} \cdot (\boldsymbol{A} + \boldsymbol{B} \times \boldsymbol{C}) = 6 + 2 = 8$。
+
+(f) $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C} - \boldsymbol{A} \times \boldsymbol{B}) = \boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C}) - \boldsymbol{A} \cdot (\boldsymbol{A} \times \boldsymbol{B})$。
+由 (c) 知第一项为 $2$。由于 $\boldsymbol{A} \times \boldsymbol{B}$ 垂直于 $\boldsymbol{A}$，故第二项混合积为 $0$。
+因此 $\boldsymbol{A} \cdot (\boldsymbol{B} \times \boldsymbol{C} - \boldsymbol{A} \times \boldsymbol{B}) = 2 - 0 = 2$。
+\end{solution}
+

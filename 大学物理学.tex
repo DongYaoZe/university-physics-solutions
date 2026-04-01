@@ -1,0 +1,183 @@
+\documentclass[lang=cn,zihao=-4,a4paper,fontset=none]{beautybook}
+% ---------------------------------------------------------------------------- %
+%                            The Cover Theme Chosen                            %
+% ---------------------------------------------------------------------------- %
+\definecolor{coverbgcolor}{HTML}{bcd2cc}
+\definecolor{coverfgcolor}{HTML}{33545f} % The color of the background
+\definecolor{coverbar}{HTML}{517794} % The color of the left bar
+\definecolor{bottomcolor}{HTML}{2c4f54}
+\definecolor{nuanbai}{HTML}{f5f5f5}
+\pagecolor{nuanbai}
+\beautybookstyle={
+  cover-choose=en, % en/cn/enfig/birkar
+  math-font=plain, % plain/mtpro2
+  sidebar=off, % on/off
+}
+% \usepackage{stys/beautybook-ensettings}
+\usepackage{stys/beautybook-cnsettings}
+% ---------------------------------------------------------------------------- %
+%                            The Cover Theme Chosen                            %
+% ---------------------------------------------------------------------------- %
+\begin{document}
+\thispagestyle{empty}
+\title{大学物理学（卢德馨）}
+\subtitle{自用版习题解答}
+\edition{Edition 1.1}
+\bookseries{面向21世纪课程教材\\
+Textbook Series for 21st Century}
+\author{编撰者：董耀择\hspace{1em} Gemini 3.1 Pro} 
+\pressname{KYM Honors School}
+\presslogo{kuangyummy2}
+\coverimage{hummingbird-8013214}
+
+\copyrightpage%
+{Kuang Yaming Honors School}% 院系
+{Nanjing University}% 大学
+{内部自编讲义}% 出版社（因为是自编版，这里填内部讲义或留空均可）
+{15-01}% AMS分类号（15-01 是线性代数与多项式相关的教学/教材分类号）
+{Nanjing}% 城市
+
+\makecover
+
+\makeatletter
+% ---------------------------------------------------------------------------- %
+%                           The Sidebar Theme Chosen                           %
+% ---------------------------------------------------------------------------- %
+\definecolor{bg}{HTML}{e0e0e0}
+\definecolor{fg}{HTML}{2c4f54}
+\colorlet{outermarginbgcolor}{bg} % The foreground color of the sidebar
+\colorlet{outermarginfgcolor}{fg} % The background color of the sidebar
+% set the contents of the outer margin on even and odd pages for scrheadings, plain and scth
+% \oddoutermargin{\sffamily \leftmark} % Odd 奇数页
+% \evenoutermargin{\sffamily\@title} % Even 偶数页
+% ---------------------------------------------------------------------------- %
+%                           The Sidebar Theme Chosen                           %
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+%                         The images used in the title                         %
+% ---------------------------------------------------------------------------- %
+% \titleimage{
+%   chapteroddimage={odd1,odd2,odd3,odd4,odd5,odd6,odd7,odd8,odd9,odd10,odd11,odd12,odd13,odd14,odd15,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,mid9,mid10,mid11},
+% %
+%   partoddimage={odd1,odd2,odd3,odd4,odd5,odd6,odd7,odd8,odd9,odd10,odd11,odd12,odd13,odd14,odd15,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,mid9,mid10,mid11},
+% %
+%   chapterevenimage={songeven,even1,even2,even3,even4,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,mid9,mid10,mid11},
+% %
+%   partevenimage={songeven,even1,even2,even3,even4,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,mid9,mid10,mid11},
+% }
+\titleimage{
+  chapteroddimage={c9,c10},
+%
+  partoddimage={c9,c10},
+%
+  chapterevenimage={c9,c10},
+%
+  partevenimage={c9,c10},
+}
+\chapimage{\beautybook@chapterimagename} % 会自动改变
+\partimage{\beautybook@partimagename}    % 会自动改变
+\makeatother
+% ---------------------------------------------------------------------------- %
+%                         The images used in the title                         %
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+%                      The Color Chosen for The Magic Box                      %
+% ---------------------------------------------------------------------------- %
+\colorlet{framegolden}{fg} % The line color of the magic box
+\colorlet{framegray}{bg!50} % The background color of the magic box
+% ---------------------------------------------------------------------------- %
+%                      The Color Chosen for The Magic Box                      %
+% ---------------------------------------------------------------------------- %
+
+
+
+\clearpage
+%%%%%%%%%%%%%%%% Copyright-Page (版权页排版) %%%%%%%%%%%%%%%%%%%%%%%
+\copyrights
+\makeatletter
+\thispagestyle{empty} % 版权页通常不需要页眉页脚
+\vspace*{5em}         % 顶部留出一定空白
+
+\ifdefempty{\@faculty}{}{\noindent{\large\textsc{\@faculty}} \\}
+\ifdefempty{\@university}{}{{\large\textsc{\@university}} \\[1em]}
+\ifdefempty{\@publisher}{}{\textit{Published by:} \@publisher \\}
+\ifthenelse{\boolean{copyright}}{\textit{Copyright by:} \textsc{\templateauthor }\\}{} 
+\ifdefempty{\@ams}{}{\textit{AMS Classification (2020):} \@ams.\\}
+\vfill
+\ifdefempty{\@city}{}{\noindent\@city, on \today\\}
+\copyright\,\the\year\, \textsc{The Authors}
+\doclicenseThis
+
+\cleardoublepage
+\makeatother
+%%%%%%%%%%%%%%%% Copyright-Page %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\frontmatter
+\pagenumbering{Roman}
+
+{% Preface
+\thispagestyle{empty}
+% \addcontentsline{toc}{chapter}{Preface}
+\chapter*{前言}
+
+中科大的这本《数学分析讲义》我觉得编得很好，非常有水平，比起某同济绿皮书不知好到了哪里去。
+
+唯一美中不足的是，这本书的课后习题竟然没有解析，这对我阅读本书造成了非常大的不便。
+
+还有一个重要的原因是，我们授课老师也使用这本书上的习题来布置作业。我们做完作业之后，没有答案，缺少一个实时的反馈，也不知道自己做对了还是做错了，对学习着实不友好。
+
+于是我想通过各种途径来获得这本教材的答案。遗憾的是，科大似乎没有民间答案流传，我通过互联网渠道也没发现任何答案。
+
+我心想，一定要弄出个答案来！别人不弄，那我就要成为那第一个！
+
+幸运的是，我自己之前有过编书的经历。无论是\href{https://sites.google.com/a/brown.edu/sergei-treil-homepage/linear-algebra-done-wrong}{Linear Algebra Done Wrong}（\href{http://github.com/DongYaoZe/Translate-LADW}{错位的线性代数}），还是与教授合作编写的尚未出版的新书线性代数，都让我对书籍排版有了很深入的了解。再加上我现在买了Gemini Pro会员，于是我就想用AI来帮我完成这项任务。
+
+我首先去Z站下载了本书的电子版，获得了清晰的教材扫描图片。然后我让AI把这些图片里的题目转换为 \LaTeX{} 代码。不到十分钟，工作就完成了。接着我开启新的对话，一个小节一个小节地把这些题目喂给了AI，让AI为我解答，生成习题册出版物标准的参考答案。边让AI生成，我边写这前言。现在刚好写完，AI也刚好把所有题目的答案都生成给我了。一看时间，总共不到两个小时。
+
+之前跟一个友人说，现在我用这些AI，什么心情呢，可能既兴奋又恐惧吧。前几年其实也略微有一点不安，但还是以人类为主。但现在AI已经被训练到了这种程度，我都看不清自己身为人类的未来了。
+
+但姑且先用着。AI还是太好用了，想象不出来前AI时代要花几个月完成的工作现在两个小时就能全部搞定（我翻译的时候AI还没有那么强大，所以真的是有着切身体会），而且AI给出的解答也很不错。
+
+有了AI，我可以创造出自己现在水平所创造不出来的价值和成就。
+
+正是如此。正当如此。
+
+\vspace{1em}
+我将本项目开源到了GitHub上，地址为：\\ \url{https://github.com/DongYaoZe/math-analysis-lectures-solutions-USTC}。求一个Star。若您对本项目有任何疑问、建议或想法，欢迎通过我的电子邮箱\\
+251840159@smail.nju.edu.cn 与作者联系。也欢迎大家积极纠错，或为这本习题集提供更好的答案。
+
+\vspace{1em}
+\begin{flushright}
+董耀择~~~~~~~~~~~~~~~~~
+
+2026年3月15日晚，~~~
+
+于南大鼓楼校区陶园三舍~~~~~
+\end{flushright}
+
+\clearpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+\tableofcontents\let\cleardoublepage\clearpage
+
+\mainmatter
+\pagenumbering{arabic}
+
+\input{00答案}
+
+
+
+% \printbibliography[heading=bibintoc,title={Bibliography}]\printindex\thispagestyle{empty}
+\bottomimage{hummingbird-8013214}
+\ISBNcode{\EANisbn[ISBN=114-51-4191-981-7]} %
+\summary{一本平平无奇的大学物理学习题解答。}
+\makebottomcover
+\end{document} 
