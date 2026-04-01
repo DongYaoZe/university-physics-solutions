@@ -27,3 +27,6 @@
 若您对本项目有任何疑问、建议或想法，欢迎通过以下方式与我联系：
 * **Email**: 251840159@smail.nju.edu.cn
 
+## 致谢
+
+本项目 LaTeX 模板采用了 [BeautyBook](https://github.com/BeautyLaTeX/Beautybook)，在此表示感谢。
