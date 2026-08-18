@@ -1,0 +1,31 @@
+# Build environments provide fonts; do not vendor local font bundles.
+/fonts/
+
+# Local cloud-build cache / broker metadata
+/.texpage/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+/_minted*/
+
+# Root-level compiled/release artifacts
+/*.pdf
+/*.zip
+
+# Local audit/render scratch files
+/AUDIT_*.md
+/_visual_*/
+/_compile_issues.txt
+/_source_*.txt
+/_src_ans_*.txt

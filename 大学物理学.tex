@@ -1,0 +1,155 @@
+\documentclass[lang=cn,zihao=-4,a4paper,openany,fontset=fandol]{beautybook}
+% ---------------------------------------------------------------------------- %
+%                            The Cover Theme Chosen                            %
+% ---------------------------------------------------------------------------- %
+\definecolor{coverbgcolor}{HTML}{bcd2cc}
+\definecolor{coverfgcolor}{HTML}{33545f} % The color of the background
+\definecolor{coverbar}{HTML}{517794} % The color of the left bar
+\definecolor{bottomcolor}{HTML}{2c4f54}
+\definecolor{nuanbai}{HTML}{f5f5f5}
+\pagecolor{nuanbai}
+\beautybookstyle={
+  cover-choose=cn, % en/cn/enfig/birkar
+  math-font=plain, % plain/mtpro2
+  sidebar=off, % on/off
+}
+% \usepackage{stys/beautybook-ensettings}
+\usepackage{stys/beautybook-cnsettings}
+\hypersetup{
+  pdftitle={大学物理学（卢德馨）习题解答},
+  pdfauthor={董耀择},
+  pdfsubject={大学物理习题解答与校勘},
+  pdfkeywords={大学物理, 卢德馨, 习题解答}
+}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+% ---------------------------------------------------------------------------- %
+%                            The Cover Theme Chosen                            %
+% ---------------------------------------------------------------------------- %
+\begin{document}
+\thispagestyle{empty}
+\title{大学物理学（卢德馨）}
+\subtitle{自用版习题解答}
+\edition{2026.08 校勘版}
+\bookseries{面向21世纪课程教材\\
+Textbook Series for 21st Century}
+\author{董耀择}
+\pressname{KYM Honors School}
+\presslogo{kuangyummy2}
+\coverimage{hummingbird-8013214}
+
+\copyrightpage%
+{Kuang Yaming Honors School}% 院系
+{Nanjing University}% 大学
+{内部自编讲义}% 出版社（因为是自编版，这里填内部讲义或留空均可）
+{}% 本项目为物理习题解答，不使用 AMS 数学分类号
+{Nanjing}% 城市
+
+\makecover
+
+\makeatletter
+% ---------------------------------------------------------------------------- %
+%                           The Sidebar Theme Chosen                           %
+% ---------------------------------------------------------------------------- %
+\definecolor{bg}{HTML}{e0e0e0}
+\definecolor{fg}{HTML}{2c4f54}
+\colorlet{outermarginbgcolor}{bg} % The foreground color of the sidebar
+\colorlet{outermarginfgcolor}{fg} % The background color of the sidebar
+% set the contents of the outer margin on even and odd pages for scrheadings, plain and scth
+% \oddoutermargin{\sffamily \leftmark} % Odd 奇数页
+% \evenoutermargin{\sffamily\@title} % Even 偶数页
+% ---------------------------------------------------------------------------- %
+%                           The Sidebar Theme Chosen                           %
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+%                         The images used in the title                         %
+% ---------------------------------------------------------------------------- %
+% 大学物理专用章节装饰：使用仓库内的轻量矢量图，避免为 32 章加载数十张大 PNG。
+\titleimage{
+  chapteroddimage={c9,c10,c11},
+  partoddimage={c9,c10,c11},
+  chapterevenimage={c10,c11,c9},
+  partevenimage={c10,c11,c9},
+}
+\chapimage{\beautybook@chapterimagename} % 会自动改变
+\partimage{\beautybook@partimagename}    % 会自动改变
+\makeatother
+% ---------------------------------------------------------------------------- %
+%                         The images used in the title                         %
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+%                      The Color Chosen for The Magic Box                      %
+% ---------------------------------------------------------------------------- %
+\colorlet{framegolden}{fg} % The line color of the magic box
+\colorlet{framegray}{bg!50} % The background color of the magic box
+% ---------------------------------------------------------------------------- %
+%                      The Color Chosen for The Magic Box                      %
+% ---------------------------------------------------------------------------- %
+
+
+
+\clearpage
+%%%%%%%%%%%%%%%% Copyright-Page (版权页排版) %%%%%%%%%%%%%%%%%%%%%%%
+\copyrights
+\makeatletter
+\thispagestyle{empty} % 版权页通常不需要页眉页脚
+\vspace*{5em}         % 顶部留出一定空白
+\begingroup\raggedright
+
+\ifdefempty{\@faculty}{}{\noindent{\large\sffamily\bfseries\@faculty} \\}
+\ifdefempty{\@university}{}{{\large\sffamily\bfseries\@university} \\[1.5em]}
+{\large\bfseries 内部学习资料}\par
+\vspace{0.8em}
+编校：董耀择\par
+依据卢德馨《大学物理学（第二版）》习题整理，仅供学习、复习与校勘使用。\par
+\vfill
+2026 年 8 月修订\par
+\endgroup
+
+\clearpage
+\makeatother
+%%%%%%%%%%%%%%%% Copyright-Page %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\frontmatter
+\pagenumbering{Roman}
+
+{% Preface
+\thispagestyle{empty}
+% \addcontentsline{toc}{chapter}{Preface}
+\chapter*{前言}
+
+本书整理卢德馨《大学物理学（第二版）》的习题解答，重点保留推导、单位检查和关键物理判断。书末奇数题参考答案用于交叉核对；遇到能够由题面、量纲或直接计算确认的原书勘误，则在相应题后说明。
+
+\vspace{1em}
+\begin{flushright}
+董耀择\par
+2026 年 8 月修订
+\end{flushright}
+
+\clearpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+
+\mainmatter
+\pagenumbering{arabic}
+
+\input{00答案}
+
+
+
+% \printbibliography[heading=bibintoc,title={Bibliography}]\printindex\thispagestyle{empty}
+\bottomimage{hummingbird-8013214}
+% 内部自编讲义不使用虚构 ISBN。
+\summary{卢德馨《大学物理学（第二版）》习题解答与校勘。}
+\makebottomcover
+\end{document} 
