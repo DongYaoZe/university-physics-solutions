@@ -996,6 +996,8 @@ $$ a_x = - \frac{F}{2m} \frac{x}{\sqrt{\ell^2 - x^2}} $$
     $$ N = m g_{\mathrm{eff}} \cos\theta = m(g + a) \cos\theta $$
     （注：严格按照物理定律，“向上加速”会使有效重力增加，故支持力必定大于 $mg\cos\theta$。）
 \end{enumerate}
+
+\textit{方向校验：}章首保留的原书奇数题参考答案把 (c) 写成 $(g-a)\sin\theta$、把 (f) 写成 $m(g-a)\cos\theta$，但原书题面这里明确是“匀加速上升”。取实验室系向上为正时，升降机加速度为 $+a$；在升降机系中的惯性力向下，因此有效重力应为 $g+a$。$g-a$ 对应的是升降机加速度向下的情形，不能用于本题 (c)、(f)。
 \end{solution}
 
 \begin{exercise}\label{ex:3.4}
@@ -1048,6 +1050,7 @@ $$ a_x = - \frac{F}{2m} \frac{x}{\sqrt{\ell^2 - x^2}} $$
 $$ \frac{\omega_{\max}^2 r}{g} = \frac{\sin\theta + \mu \cos\theta}{\cos\theta - \mu \sin\theta} = \frac{\tan\theta + \mu}{1 - \mu \tan\theta} $$
 代入 $\omega_{\max} = 2\pi f_{\max}$，解得：
 $$ f_{\max} = \frac{1}{2\pi} \sqrt{ \frac{g}{r} \frac{\tan\theta + \mu}{1 - \mu \tan\theta} } $$
+该有限上限只在 $\mu\tan\theta<1$ 时存在。若 $\mu\tan\theta\to1^{-}$，上式给出 $f_{\max}\to\infty$；若 $\mu\tan\theta\ge1$，则在理想库仑静摩擦模型中没有有限的最大转速，因为当离心作用远大于重力时，维持静止所需的极限摩擦比趋于 $f_s/N\to\cot\theta\le\mu$。此时应记为“无有限上限”，而不能继续把根号中的负数当作转速。
 
 \textbf{2. 求最小转速 $f_{\min}$}：
 当转速达到最小时，立方块有沿漏斗内壁向下滑动的趋势，此时静摩擦力达到最大并沿着内壁向上，即 $f_s = \mu N$。
@@ -1745,7 +1748,9 @@ $$ R \approx 3.1 \times \sqrt{\frac{3}{8 \times 3.1416 \times 6.674 \times 10^{-
     此时碎块的动能为 $0$，它仅具有由于处在距离 $r$ 的位置而拥有的引力势能。
     碰撞后的总机械能 $E'$ 即为其引力势能：
     $$ E' = 0 + U_{2m} = -G\frac{m_\oplus (2m)}{r} $$
-    该结果与碰撞前完全相同（实际上，碰撞耗散的动能刚好等于 $G\frac{m_\oplus m}{r}$）。
+    因而
+    $$ E'-E_{\text{总}}=-G\frac{m_\oplus m}{r}. $$
+    碰撞后的机械能并不与碰撞前相同；它减少了 $Gm_\oplus m/r$。这恰好等于碰撞前两颗卫星的总动能，并在完全非弹性碰撞中转化为内能、形变等非机械能。碰撞极短时间内位置几乎不变，所以引力势能在碰撞前后连续不变。
 
     \item[(c)] \textbf{碰撞后碎片的运动}：
     由于碎片碰撞后瞬间切向速率降为零，失去抗衡地球引力的“离心力”，仅在地球万有引力作用下，碎片将脱离原轨道并做自由落体运动，沿着径向径直加速下落，最终坠毁在地球表面。
@@ -1769,6 +1774,12 @@ $$ \frac{1}{2}m (v')^2 - \frac{GMm}{R+h} = \frac{1}{2}m(v_r^2 + v_\theta^2) - \f
 代入 $v'$ 的表达式，得到确定 $h$ 的精确方程：
 $$ \frac{1}{2} \left( \frac{v_\theta R}{R+h} \right)^2 - \frac{GM}{R+h} = \frac{1}{2}(v_r^2 + v_\theta^2) - \frac{GM}{R} $$
 
+这里先做一个反事实检查：只有轨道存在有限的外侧转向点时，才有有限的“最大高度”。若
+$$ \frac12(v_r^2+v_\theta^2)-\frac{GM}{R}\ge0
+\quad\Longleftrightarrow\quad
+v_r^2+v_\theta^2\ge2gR, $$
+火箭达到或超过逃逸条件，不存在有限的 $h$，应直接使用“逃逸”结论而不是求根。
+
 将 $h/R \ll 1$ 视为小量，令 $x = h/R$。利用泰勒展开近似：
 $$ \frac{1}{R+h} = \frac{1}{R(1+x)} \approx \frac{1}{R}(1 - x) $$
 $$ \frac{1}{(R+h)^2} = \frac{1}{R^2(1+x)^2} \approx \frac{1}{R^2}(1 - 2x) $$
@@ -1780,6 +1791,7 @@ $$ \frac{1}{2}v_\theta^2 - x v_\theta^2 - gR + x gR = \frac{1}{2}v_r^2 + \frac{1
 $$ x (gR - v_\theta^2) = \frac{1}{2}v_r^2 $$
 因为 $x = h/R$，得到：
 $$ h \frac{gR - v_\theta^2}{R} = \frac{1}{2}v_r^2 \implies h = \frac{v_r^2}{2(g - v_\theta^2/R)} $$
+这个一阶近似还要求 $v_\theta^2<gR$ 且 $g-v_\theta^2/R$ 不接近于零，否则所得 $h/R$ 不再是小量。特别地，令 $v_r\to0$ 会暴露一个退化情形：若 $v_r=0$ 且 $v_\theta=\sqrt{gR}$，精确运动是半径 $R$ 的圆轨道，$h=0$；若 $\sqrt{gR}<v_\theta<\sqrt{2gR}$，发射点本身是近地点，最大高度来自精确方程的另一个转向根，不能由上面的一阶式（它只保留了 $h=0$ 这个根）得到。
 
 \textbf{垂直向上情形}：若发射速度为垂直向上，则切向速度分量 $v_\theta = 0$，径向速度 $v_r = v_0$。代入上述近似解得：
 $$ h = \frac{v_r^2}{2g} $$
@@ -3354,6 +3366,8 @@ $$ \omega = \sqrt{\frac{5g}{7R}} $$
 \end{center}
 \end{exercise}
 \begin{solution}
+题面说圆柱“无摩擦地滚动”，这里必须区分\textbf{无滚动耗散}与\textbf{静摩擦系数为零}。下面的教材结果要求圆柱始终纯滚动而不滑动：接触处可以有静摩擦力，只是理想静摩擦不耗散机械能。若真的取 $\mu_s=0$，弹簧又作用在圆柱质心上，则圆柱没有力矩，初始静止的圆柱不会自发转动，后面的滚动能量分配和周期都不成立。
+
 系统由静止偏离平衡位置 $A = 0.25 \ \mathrm{m}$ 处释放，弹簧劲度系数 $k = 3.0 \ \mathrm{N/m}$。
 初始时系统的总机械能（全是弹性势能）为：
 $$ E = \frac{1}{2} k A^2 = \frac{1}{2} (3.0) (0.25)^2 = 1.5 \times 0.0625 = 0.09375 \ \mathrm{J} $$
@@ -3382,6 +3396,9 @@ $$ K_r = \frac{1}{2} I \omega^2 = \frac{1}{2} \left( \frac{1}{2} m r^2 \right) \
     $$ \omega = \sqrt{\frac{2k}{3m}} $$
     因此，圆柱的运动周期为：
     $$ T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{3m}{2k}} $$
+    纯滚动约束还要求静摩擦足够大。由平动与转动方程可得 $f_s=kx/3$，故在振幅 $A$ 处要求
+    $$ \mu_s mg\ge \frac{kA}{3}. $$
+    若取反事实极限 $\mu_s\to0$，约束失效：圆柱只作不转动的平动，周期应回到 $2\pi\sqrt{m/k}$，而不是上式。
     证毕。
 \end{enumerate}
 \end{solution}
@@ -5545,7 +5562,10 @@ $$ \eta = 1 - \left( \frac{V_1}{V_2} \right)^{\gamma-1} $$
 具有系数 $\gamma$ 的气体最初在汽缸中的体积为 $V_0$，压强为 $p_0$，然后缓慢地、绝热地压缩到 $V_0/2$. 在该体积下，让气体达到平衡温度后，又让它缓慢并且等温地膨胀到原始体积 $V_0$. 试求活塞对气体所作的净功，用 $p_0$、$V_0$ 来表示.
 \end{exercise}
 \begin{solution}
-题意中指出：在被绝热压缩到一半体积后，让气体“达到平衡温度”再作等温膨胀回到原始体积。这意味着气体冷却回到了与初始环境相同的温度（设为 $T_0$），随后的等温膨胀过程完全在初始温度 $T_0$ 下进行。
+题意中指出：在被绝热压缩到一半体积后，让气体“达到平衡温度”再作等温膨胀回到原始体积。这里“平衡温度”本身没有写出热库温度；章首保留的原书第 13 题参考答案含有 $-p_0V_0\ln2$，这等价于把该平衡温度解释为初始环境温度 $T_0$。以下按这一原书口径计算。
+
+若实际热平衡温度是另一个 $T_e$，则第二阶段气体作功应为 $p_0V_0(T_e/T_0)\ln2$，净功不会唯一等于章首公式。因此“回到 $T_0$”是本题得到唯一数值表达式所必需的过程条件，而不是由“绝热压缩”本身推出的。
+
 设气体初态为状态 1：$(p_0, V_0, T_0)$。
 
 \textbf{第一阶段（活塞对气体作功 $W_{\text{in,1}}$）}：
@@ -5572,14 +5592,13 @@ $$ W_{\text{net}} = p_0 V_0 \left( \frac{2^{\gamma - 1} - 1}{\gamma - 1} - \ln 2
 一个为压缩氮气而设计的压缩机用来压缩空气时出现了过热现象，假定压缩机是近似绝热的，并且此两气体的初始压强相同，试解释这种现象.
 \end{exercise}
 \begin{solution}
-对于近似绝热的压缩过程，气体末态温度 $T_2$ 随压强压缩比 $(p_2/p_1)$ 和气体的比热比 $\gamma$ 变化，遵循关系式：
-$$ T_2 = T_1 \left( \frac{p_2}{p_1} \right)^{\frac{\gamma - 1}{\gamma}} = T_1 \left( \frac{p_2}{p_1} \right)^{1 - \frac{1}{\gamma}} $$
-可以看出，在相同的初始温度 $T_1$ 和相同的压缩比 $(p_2/p_1)$ 条件下，气体的比热比 $\gamma$ 越大，指数 $1 - 1/\gamma$ 就越大，绝热压缩导致的末态温度 $T_2$ 也就越高。
+这道题首先要检查“压缩机采用什么相同的工作条件”。题面只给出两种气体的\textbf{初始压强相同}，仅凭这一条件并不能唯一比较压缩后的温度；还需要初始温度以及压缩比（或单位质量输入功、质量流量等）才能作定量判断。
 
-氮气（$\mathrm{N_2}$）为纯双原子分子气体，理想情况下其比热比 $\gamma_{\mathrm{N_2}} \approx 1.40$。
-空气虽然主要成分是氮气和氧气（均为双原子分子），但其中混有约 $1\%$ 左右的氩气（$\mathrm{Ar}$）。氩气是单原子分子气体，其比热比高达 $1.67$。由于单原子分子的混入，使得空气的平均比热比 $\gamma_{\text{air}}$ 略微大于纯氮气的比热比 $\gamma_{\mathrm{N_2}}$。
+若按教材最自然的理想化补充：两气体初温相同、均近似理想气体，并且压到相同的压强比 $p_2/p_1$，可逆绝热关系给出
+$$ T_2 = T_1 \left( \frac{p_2}{p_1} \right)^{\frac{\gamma - 1}{\gamma}}. $$
+在这一\textbf{额外口径}下，$\gamma$ 越大，末温越高。因此若所采用的物性数据确有 $\gamma_{\mathrm{air}}>\gamma_{\mathrm{N_2}}$，空气会比设计所依据的氮气达到略高的排气温度。
 
-当使用专门针对较低 $\gamma$ 值（氮气设计参数）冷却能力设计的压缩机去压缩具有较高 $\gamma$ 值（实际空气）的混合气体时，同样压缩倍数下产生的高温必定会超过设计预期上限，热量难以及时被机体有效疏导吸收，从而从热力学表现为明显的过热现象。
+但普通温度下氮气和空气都主要表现为双原子理想气体，二者的 $\gamma$ 都非常接近 $1.40$；空气中少量氩气只能造成很小的修正。因此不能仅凭“空气含氩”就断言会出现\textbf{显著}过热，更不能由“初始压强相同”推出“必定过热”。若压缩机实际保持的是相同单位质量输入功，则还应比较质量比热；若保持的是相同几何压缩比，则应使用相应的 $\gamma$。本题能给出的稳妥解释是：过热必须来自实际工作条件与氮气设计工况的物性/负荷不匹配，而题面信息不足以把原因唯一归结为某一个参数。
 \end{solution}
 
 \begin{exercise}\label{ex:11.15}
@@ -7951,7 +7970,7 @@ F_e &= \frac{Q_2^2}{2\varepsilon_0 A} - \frac{Q_1^2}{2\varepsilon_0 A}\\
 \end{aligned}
 \]
 
-与此同时，隔板运动导致两侧气体体积变化，按等温过程（或者假定缓慢滑动满足 $pV = \mathrm{const}$）计算，左侧压强变为 $p_1 = p_0 \frac{L}{x}$，右侧压强变为 $p_2 = p_0 \frac{L}{2L - x}$。
+与此同时，隔板运动导致两侧气体体积变化。这里题面只说“密封、无摩擦”，并没有给出传热条件或阻尼；因此\textbf{不能由题面直接推出等温过程}。下面先按教材最常用的附加理想化——隔板移动足够缓慢，且容器能与恒温环境充分换热——取 $pV=\mathrm{const}$。此时左侧压强变为 $p_1 = p_0 \frac{L}{x}$，右侧压强变为 $p_2 = p_0 \frac{L}{2L - x}$。
 气体在隔板上产生的向右推力为：
 $$ F_g = (p_1 - p_2) A = p_0 A L \left( \frac{1}{x} - \frac{1}{2L - x} \right) = 2p_0 A L \frac{L - x}{x(2L - x)} $$
 
@@ -7964,8 +7983,14 @@ $$ \frac{Q^2}{2\varepsilon_0 A L} - \frac{2p_0 A L}{x(2L - x)} = 0 \implies x(2L
 $$ x^2 - 2Lx + \frac{4\varepsilon_0 p_0 A^2 L^2}{Q^2} = 0 \implies (x - L)^2 = L^2 \left( 1 - \frac{4\varepsilon_0 p_0 A^2}{Q^2} \right) $$
 
 通过分析可知，若 $Q^2 \le 4\varepsilon_0 p_0 A^2$，二次方程无额外实根或根为重根，唯一的稳定平衡位置是居中位置 $x = L$。
-若 $Q^2 > 4\varepsilon_0 p_0 A^2$，即静电吸引力超过气压的恢复作用时，中心平衡会变为不稳定。隔板会失稳偏向一侧，稳定平衡位置（相对中心的偏离距离 $\Delta x$）为：
-$$ \Delta x = \pm L \left( 1 - \frac{4\varepsilon_0 p_0 A^2}{Q^2} \right)^{1/2} $$
+若 $Q^2 > 4\varepsilon_0 p_0 A^2$，即在上述\textbf{等温准静态模型}下静电吸引力超过气压的线性恢复作用时，中心平衡会变为不稳定。隔板会失稳偏向一侧，非中心平衡位置（相对中心的偏离距离 $\Delta x$）为：
+$$ \Delta x = \pm L \left( 1 - \frac{4\varepsilon_0 p_0 A^2}{Q^2} \right)^{1/2}. $$
+
+反事实检查显示这个临界条件并非过程无关。若两侧气体近似绝热，理想气体应满足 $pV^\gamma=\mathrm{const}$；更一般地若取多方过程 $pV^\kappa=\mathrm{const}$，在中心附近令 $x=L+\delta$，气体恢复力为
+$$ F_g\simeq-\frac{2\kappa p_0A}{L}\,\delta, $$
+故中心稳定的临界条件改为
+$$ \boxed{Q^2<4\kappa\varepsilon_0p_0A^2}. $$
+等温仅对应 $\kappa=1$，绝热对应 $\kappa=\gamma$；非中心平衡位置也会随 $\kappa$ 改变。因此题面若不补充热过程，只能确定中心位置 $x=L$ 始终是一个平衡点，不能把上面的等温分岔位置当作过程无关的唯一结论。另外，在严格“无摩擦、无阻尼”的动力学模型中，稳定平衡也不意味着隔板会自行衰减并最终停在那里。
 \end{solution}
 
 \begin{exercise}\label{ex:16.8}
@@ -8928,22 +8953,26 @@ $$ \varepsilon = \frac{\mathrm{d}B}{\mathrm{d}t} \frac{\ell}{2} \sqrt{R^2 - \lef
     
     在线圈内部，由于存在自感 $L$ 和电阻 $R$，应用基尔霍夫回路电压定律可得方程：
     $$ \varepsilon_m - L \frac{\mathrm{d}I}{\mathrm{d}t} = I R \implies L \frac{\mathrm{d}I}{\mathrm{d}t} + R I = N B \pi r^2 \omega \sin(\omega t) $$
-    该方程是一个典型的一阶线性常微分方程。其稳态解具有交流电特征形式：
-    $$ I(t) = \frac{\varepsilon_{\max}}{\sqrt{R^2 + (\omega L)^2}} \sin(\omega t - \varphi) $$
-    其中电动势幅值 $\varepsilon_{\max} = N B \pi r^2 \omega$。电流的相位落后角 $\varphi$ 满足：
-    $$ \varphi = \arctan\left( \frac{\omega L}{R} \right) $$
-    代入即可得到稳态电流函数：
-    $$ I(t) = \frac{\pi r^2 N B \omega}{\sqrt{R^2 + (\omega L)^2}} \sin(\omega t - \varphi) $$
+    该方程是一个典型的一阶线性常微分方程。题面没有给出初始电流，所以严格说来瞬时电流并不唯一；一般解应包含暂态项。令 $\theta=\omega t$，可写成
+    \[
+    I(\theta)=\frac{\varepsilon_{\max}}{\sqrt{R^2+(\omega L)^2}}\sin(\theta-\varphi)
+      +C\exp\!\left(-\frac{R\theta}{\omega L}\right),
+    \]
+    其中 $\varepsilon_{\max}=NB\pi r^2\omega$，
+    $$ \varphi = \arctan\left( \frac{\omega L}{R} \right), $$
+    而常数 $C$ 由初始电流决定。经过若干时间常数 $L/R$ 后，暂态衰减，此时才得到通常采用的周期稳态解
+    $$ I_{\mathrm{ss}}(t) = \frac{\pi r^2 N B \omega}{\sqrt{R^2 + (\omega L)^2}} \sin(\omega t - \varphi). $$
 
     \item[(b)] \textbf{求需加的外力矩 $M$}：
     通有电流 $I$ 的线圈在磁场中受到安培力产生的磁力矩大小为：
     $$ \tau_m = |\boldsymbol{m} \times \boldsymbol{B}| = (N I A) B \sin\theta = N I \pi r^2 B \sin(\omega t) $$
-    将上一问求得的电流 $I(t)$ 表达式代入：
-    $$ \tau_m = N \left( \frac{\pi r^2 N B \omega}{\sqrt{R^2 + \omega^2 L^2}} \sin(\omega t - \varphi) \right) \pi r^2 B \sin(\omega t) $$
-    整理得到：
-    $$ \tau_m = \frac{(\pi r^2 N B)^2 \omega}{\sqrt{R^2 + L^2 \omega^2}} \sin(\omega t) \sin(\omega t - \varphi) $$
-    为了维持线圈以匀角速度 $\omega$ 稳定转动，所施加的机械外力矩 $M$ 必须严格克服安培阻力矩 $\tau_m$（即大小相等，方向相反），所以外力矩大小为：
-    $$ M = \tau_m = \frac{(\pi r^2 N B)^2 \omega}{\sqrt{R^2 + L^2 \omega^2}} \sin(\omega t) \sin(\omega t - \varphi) $$
+    因而维持严格匀角速度时，外力矩应在每一瞬间抵消磁力矩；若保留暂态，则应直接写为
+    $$ M_{\mathrm{ext}}(t)=-N\pi r^2B\,I(t)\sin(\omega t), $$
+    其中 $I(t)$ 取上一问的一般解。若题目默认“转动已持续足够久”而只问周期稳态，则代入 $I_{\mathrm{ss}}$ 得其大小
+    $$ |M_{\mathrm{ss}}|
+    =\left|\frac{(\pi r^2 N B)^2 \omega}{\sqrt{R^2 + L^2 \omega^2}}
+      \sin(\omega t) \sin(\omega t - \varphi)\right|. $$
+    注意磁力矩的瞬时符号可随相位改变；“维持匀速”要求外加装置相应地给出相反的瞬时力矩，而不是只提供一个恒定阻力矩。
 \end{enumerate}
 \end{solution}
 
